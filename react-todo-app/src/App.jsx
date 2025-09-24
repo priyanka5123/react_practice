@@ -1,14 +1,18 @@
-// import { useState } from 'react'
 import './App.css'
+import Header from './Header'
+import Footer from './Footer'
+import WelcomeMessage from './WelcomeMessage'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <h1>My First React App 🎉</h1>
-        <p>React is ready, let’s go 🚀</p>
+        <Header/>
+        {/* <h1>My First React App 🎉</h1> */}
+        <WelcomeMessage/>
+        <p>Tasks will go here....</p>
+        <Footer/>
       </div>
     </>
   )
