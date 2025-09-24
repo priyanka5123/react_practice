@@ -9,7 +9,6 @@ function App() {
     <>
       <div>
         <Header/>
-        {/* <h1>My First React App 🎉</h1> */}
         <WelcomeMessage/>
         <p>Tasks will go here....</p>
         <Footer/>
