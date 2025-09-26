@@ -1,6 +1,7 @@
 React is declarative: you describe what the UI should look like.
 Vanilla JS is imperative: you instruct the DOM step by step.
 React’s big power: managing complexity as apps grow.
+
 Why Do We Need a Setup?
 In vanilla JS, we could just drop a <script> tag in HTML and write code.
 But React needs a bit more:
