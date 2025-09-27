@@ -47,3 +47,21 @@ Readable: Code is easier to follow.
 Components = functions that return UI.
 Write once, use anywhere with <ComponentName />.
 Apps are just a tree of components.
+
+Think of components like functions in math: they take input and return output.
+In React, that input is called props (short for properties).
+Props = inputs to components.
+They make components reusable.
+Use {} in JSX to insert dynamic values.
+Destructuring props is a common pattern.
+
+Props let us give data from outside a component.
+But sometimes, a component needs to remember its own data — like whether a todo is completed, or what the user typed.
+
+That’s what state is: React’s built-in way of storing values that can change over time.
+With useState, React automatically re-renders when the state changes.
+
+Props = external inputs.
+State = component’s own memory.
+useState gives you [value, setter].
+Updating state (setState) triggers a re-render.
