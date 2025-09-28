@@ -65,3 +65,13 @@ Props = external inputs.
 State = component’s own memory.
 useState gives you [value, setter].
 Updating state (setState) triggers a re-render.
+
+In vanilla JavaScript, we used addEventListener to “listen” for clicks, input, etc.
+In React, we attach events directly in JSX with a special naming style.
+
+Events connect user actions → state updates → UI changes.
+
+React events use camelCase (onClick, onChange).
+Attach event handler functions directly in JSX.
+Events usually change state, which triggers UI updates.
+No need for manual DOM manipulation.

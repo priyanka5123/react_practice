@@ -2,7 +2,7 @@ import './App.css'
 import Header from './Header'
 import Footer from './Footer'
 import WelcomeMessage from './WelcomeMessage'
-import TodoItem from './Todoitem'
+import TodoList from './Todoitem'
 import UserCard from './UserCard'
 import Counter from './Counter'
 function App() {
@@ -14,11 +14,7 @@ function App() {
         <WelcomeMessage/>
         
         <p>Tasks will go here....</p>
-        <ul>
-          <TodoItem text="Learn React" completed={false}  priority="(priority: high)"/>
-          <TodoItem text="Practice ES6" completed={true} priority="(priority: medium)"/>
-        </ul>
-        
+        <TodoList />
         <p>
           <UserCard name="Sara" role="Teacher" />
         </p>
