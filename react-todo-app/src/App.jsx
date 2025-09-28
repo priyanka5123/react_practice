@@ -4,6 +4,7 @@ import Footer from './Footer'
 import WelcomeMessage from './WelcomeMessage'
 import TodoItem from './Todoitem'
 import UserCard from './UserCard'
+import Counter from './Counter'
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
         <p>
           <UserCard name="Sara" role="Teacher" />
         </p>
+        <Counter />
         <Footer/>
       </div>
     </>

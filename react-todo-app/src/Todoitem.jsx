@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 function TodoItem({ text, completed, priority }) {
-  return (
+    const[done, setDone] = useState(completed);
+
+    return (
     <li>
-      {completed ? "✅" : "⬜"} {text} {priority}
+      <button onClick={() => setDone(!done)}>
+        {done ? "✅" : "⬜"}
+      </button>{" "}
+      {text}  {priority}
     </li>
   );
 }
