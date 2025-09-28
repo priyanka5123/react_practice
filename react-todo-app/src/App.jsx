@@ -5,6 +5,8 @@ import WelcomeMessage from './WelcomeMessage'
 import TodoList from './Todoitem'
 import UserCard from './UserCard'
 import Counter from './Counter'
+import Lists from './Lists'
+
 function App() {
 
   return (
@@ -19,6 +21,7 @@ function App() {
           <UserCard name="Sara" role="Teacher" />
         </p>
         <Counter />
+        <Lists />
         <Footer/>
       </div>
     </>

@@ -75,3 +75,33 @@ React events use camelCase (onClick, onChange).
 Attach event handler functions directly in JSX.
 Events usually change state, which triggers UI updates.
 No need for manual DOM manipulation.
+
+Many apps need to display a list of things: todos, products, messages, etc.
+In vanilla JS, we used for loops or .forEach to manually build DOM nodes.
+In React, we use .map() inside JSX to declare what each item should look like.
+
+👉 But there’s a twist: React needs a key to keep track of items when updating.
+
+The key is how React knows which item is which.
+
+Without keys → React may get confused when items change.
+With keys → React can update, add, or remove items efficiently.
+
+Using the array index works for static lists, but it can break when items are added/removed:
+
+// ❌ risky
+{todos.map((t, i) => <li key={i}>{t}</li>)}
+
+Use .map() in JSX to render arrays.
+Always provide a unique key for each list item.
+Keys help React identify items for efficient re-rendering.
+
+In React, you don’t have if/else statements outside your UI.
+Instead, you use JavaScript expressions inside JSX (? : ternary, &&, if before return) to decide what to show.
+
+👉 Conditional rendering = React’s way of saying: “Show this UI if the condition is true, otherwise show something else.”
+
+In Vanilla JS you manually build different DOMs depending on conditions. In React the UI changes automatically when the data changes.
+Conditional rendering = decide what to show based on data.
+Use ternary (? :), &&, or if to control JSX.
+Split UI into smaller components for clarity.

@@ -1,12 +1,15 @@
 import { useState } from "react";
 
-function TodoItem({ id ,text, completed, priority, deleteTodo }) {
-    const[done, setDone] = useState(completed);
+function EmptyState() {
+  return <p>"No tasks today!"</p>;
+}
+
+function TodoItem({ id ,text, completed, priority,toggleTodo, deleteTodo }) {
 
     return (
     <li>
-      <button onClick={() => setDone(!done)}>
-        {done ? "✅" : "⬜"}
+      <button onClick={() => toggleTodo(id)}>
+        {completed ? "✅" : "⬜"}
       </button>{" "}
       {text}  {priority} {" "}
       <button onClick={() => deleteTodo(id)} style={{ color: "red" }}>Delete</button>
@@ -24,19 +27,37 @@ function TodoList(){
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
+  const toggleTodo = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      )
+    );
+  };
+
+  const allCompleted = todos.length > 0 && todos.every((todo) => todo.completed);
+
   return (
-    <ul>
-      {todos.map((todo) => (
-        <TodoItem
-          key={todo.id}
-          id={todo.id}
-          text={todo.text}
-          completed={todo.completed}
-          priority={todo.priority}
-          deleteTodo={deleteTodo}
-        />
-      ))}
-    </ul>
+    <div>
+      {todos.length === 0 ? <EmptyState /> : 
+      allCompleted ? <p>🎉 Good job! All tasks completed.</p> :
+      <ul>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            id={todo.id}
+            text={todo.text}
+            completed={todo.completed}
+            priority={todo.priority}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+          />
+        ))}
+      </ul>
+      }
+    </div>
   );
 }
 
