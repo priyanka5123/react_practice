@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Lists() {
-    const [lists, setlists] = useState([
+    const [lists] = useState([
         {id: 1, text: "Eat"},
         {id: 2, text: "Sleep"},
         {id: 3, text: "Code"},

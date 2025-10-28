@@ -22,7 +22,7 @@ function TodoList(){
     { id: 1, text: "Learn React", completed: false, priority: "high" },
     { id: 2, text: "Practice ES6", completed: true, priority: "medium" },
   ]);
-
+  
   const deleteTodo = (id) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
